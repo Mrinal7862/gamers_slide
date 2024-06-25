@@ -1,0 +1,692 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Oswald";
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    
+    overflow-x: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+}
+
+.back {
+    position: relative; /* Ensure the z-index property works */
+    background: linear-gradient(to bottom, #7521FF, #524E5C);
+    height: 510vh;
+    width: 100%;
+    z-index: 1; /* Set a z-index value */
+    /* display: flex; */
+    transition: background-color 2s ease; /* Define the transition */
+    
+}
+#change {
+    transition: background-color 2s ease; /* Define the transition in CSS */
+}
+
+.lgs {
+    position: absolute; /* Position the background image absolutely */
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-image: url(logoremove.png);
+    background-size: 180px;
+    background-position: center center;
+    background-repeat: space;
+    opacity: 0.4;
+    z-index: -1; 
+    animation: round 2s ease infinite;
+}
+
+.first{
+    width: 100%;
+    height: 100vh;
+}
+.heading{
+    /* margin: 53px 0px; */
+    display:flex;
+    flex-direction: column;
+}
+
+.heading h2{
+    font-size: 6rem;
+    font-weight: 400;
+    color: white;
+    padding: 0px 20px;
+    animation: slide 1s ease-in, flicks 3s ease-in infinite;
+}
+
+.heading h1{
+    font-size: 12rem;
+    font-weight: 400;
+    color: white;
+    letter-spacing: 29px ;
+    animation: slide 1s ease-in, flicks 3s ease-in infinite;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(-150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes flicks{
+    0%{
+        opacity: 1;
+    }
+    25%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.drop{
+    position: absolute;
+    top: 785px;
+    left: 45%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.drop svg{
+    /* position: absolute; */
+    height: 200px;
+    width: 200px;
+    animation: updown 5s ease-in infinite;
+    
+}
+.drop svg:hover{
+    cursor: pointer;
+}
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    25%{
+        transform: translateY(20px);
+    }
+    50%{
+        transform: translateY(0px);
+    }
+    75%{
+        transform: translateY(20px)
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes slide2 {
+    from{
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.shapes .triangle{
+    position:absolute;
+    height: 700px;
+    /* width: 900px; */
+    top: -100px;
+    right: -170px;
+    animation: updown 5s ease-in infinite, slide2 1s ease-in-out;
+}
+
+.shapes .circle{
+    height: 700px;
+    width: 700px;
+    top: 150px;
+    right: 300px;
+    animation: updown 5s ease-in infinite, slide2 2s ease-in-out;  
+
+}
+
+.shapes .cross{
+    position: absolute;
+    height: 600px;
+    width: 600px;
+    top: 500px;
+    right: -50px;
+}
+
+.shapes .square{
+    position: absolute;
+    top: 500px;
+    left: 600px;
+    height: 600px;
+    width: 600px;
+    animation: updown 5s ease-in infinite, slide2 3s ease-in-out;
+}
+.log{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 103px;
+    font-size: 3.5rem;
+    color: white;
+    position: relative;
+}
+
+.login{
+    /* position: absolute; */
+    background: linear-gradient(to left, #3F7CB4, #636B72);
+    padding: 30px 250px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+    z-index: 19;
+}
+.login:hover{
+    background-color:  #AF0807;
+}
+
+
+.register{
+    background: linear-gradient(to left, #3F7CB4, #636B72);
+    padding: 30px 250px;
+    border-radius: 100px;
+    cursor: pointer;
+    position: relative;
+}
+.register:hover{
+    background-color:  #AF0807;
+}
+.text{
+    display: flex;
+    position:relative;
+    padding: 150px 0px;
+    /* font-size: 2rem; */
+
+    color: white;
+    justify-content: space-between;
+}
+.text p{
+    font-size: 2rem;   
+}
+.lis{
+    padding: 0px 200px 0px 603px;
+}
+.lis ul{
+    list-style-type:none ;
+
+}
+.lis li{
+    text-align: center;
+    margin: 40px 0px ;
+    padding: 10px 70px;
+    font-size: 40px;
+    border-radius: 500px;
+    background: linear-gradient(to left, #4A00FF, #FF00ED);
+    cursor: pointer;
+    transition: transform 0.5s ease, background 0.5s ease;
+}
+.lis a{
+    text-decoration: none;
+}
+.lis a li{
+    text-decoration: none;
+    color: white;
+}
+
+.lis li:hover{
+    transform: scale(1.1);
+    background: linear-gradient(to left,  #FF00ED, #4A00FF);
+}
+.ran{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* position: relative; */
+}
+
+.uper nav{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    background-color: #323435;
+    position: sticky;
+    justify-content: space-between;
+    top: 0;
+    z-index: 9999;
+    align-items: center;
+}
+.uper nav ul{
+    display: flex;
+    color: white;
+    list-style-type: none;
+}
+.uper nav a{
+    text-align: center;
+    color: #2B486C;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: 500;
+    transition: color 0.3s;
+
+}
+.uper nav li a:hover{
+    color: white;
+}
+.uper nav li:hover{
+    transform: scale(1.1);
+    background-color: #2B486C;
+    color: white;
+    outline: none;
+    border: none;
+}  
+.uper nav ul li{
+    margin: 15px 30px;
+    padding: 10px 50px;
+    border-radius: 50px;
+    background-color: #EDEAE7;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.ran h1{
+    font-size: 55px;
+    color: white;
+}
+.uper nav .btn{
+    display: flex;
+    height: 90px;
+    position: relative;
+    padding: 20px 40px;
+    width: 100%;
+    gap: 20px;
+    align-items: center;
+    right: -50rem;
+}
+
+.btn h1{
+    position: relative;
+    color: white;
+}
+.btn1, .btn2{
+    padding: 0px 20px;
+    position: relative;
+    border-radius: 30px;
+    font-size:30px;
+    color: #2B486C;
+    text-align: center;
+    align-items: center; 
+    cursor: pointer;
+    transition: transform 0.5s ease, color 0.5s ease;
+}
+
+.btn1:hover, .btn2:hover{
+    transform: scale(1.1);
+    background: #2B486C;
+    color: white;
+    outline: none;
+    border: none;
+}
+.btn1 :hover, .btn2 :hover{
+    color: white;
+}
+.curly{
+    top: 20px;
+    height: 150px;
+    width: 200px;
+}
+
+
+.logs{
+    display:none ;
+    position: relative;  
+    z-index: 12;
+    height: 480px;
+    width: 380px;
+    margin: 10% auto;
+    background: #fff;
+    border-radius: 20px;
+    padding: 5px;
+    box-shadow: 0 0 20px 9px #0000005e;
+}
+
+.boxer{
+    width: 100%;
+    margin: 35px auto;
+    position: relative;
+    border-radius: 30px;
+}
+.button-box{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow:0 0 20px 9px #c300ff60;
+    border-radius: 30px;   
+    background-color: black;     
+}
+.togglebtn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+    text-align: center; 
+    color: white;
+}
+#btn{
+    top:0;
+    left:0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #6f00ff, #ff00f29a);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+.social{
+    display: flex;
+    height: 100%;
+    margin: auto 70px;
+    text-align: center;
+    position: relative;
+    /* top: 299px; */
+}
+
+.social img{
+    width: 50px;
+    margin: 0 12px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: box-shadow 0.5s ease;
+}
+.social img:hover{
+    box-shadow: 0 0 50px 10px #ff48005e;
+
+}
+
+.inputGroup{
+    position: relative;
+    bottom: 15px;
+    width: 280px;
+    transition: 0.5s;
+}
+
+.input-feild{
+    width: 100%;
+    /* padding: 10px 0; */
+    margin: 45px 30px;
+    border: 0;
+    border-bottom: 1px solid #7521FF;
+    outline: none;
+    background: transparent;
+}
+.input-feild2{
+    width: 100%;
+    /* padding: 10px 0; */
+    margin: 19px 30px;
+    border: 0;
+    border-bottom: 1px solid #7521FF;
+    outline: none;
+    background: transparent;
+}
+
+.check-box{
+    position: relative;
+    margin: 10px 50px;
+}
+.btns{
+    width: 85%;
+    cursor: pointer;
+    display: block;
+    margin:  15px 60px;
+    background: linear-gradient(to right, #4A00FF, #6f00ff);
+    border: 0;
+    outline: none;
+    color: white;
+    border-radius: 30px;
+    padding: 10px;
+    transition: background 0.3s ease;
+}
+.btns:hover{
+    background: linear-gradient(to right, #4800ff9d, #f700ff);
+}
+
+span{
+
+    color: #777;
+    /* font-size: px; */
+    bottom: 68px;
+    position: absolute;
+}
+
+
+#register{
+    display: none;
+}
+.blur{
+    filter: blur(5px);
+}
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.close-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: #555; /* Change color as needed */
+}
+
+.close-btn:hover svg {
+    fill: #333; /* Change hover color as needed */
+}
+.cardContainer {
+    display: flex;
+    gap: 40px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    padding: 50px 0px;
+}
+
+.cardContainer > div {
+    /* border: 2px solid black; */
+    height: 500px;
+    padding: 30px;
+    
+    flex: 0 0 auto;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.2s ease-in;
+}
+.cardContainer > div:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+.cardContainer > div > h2{
+    color: white;
+    padding: 20px;
+    font-size: 2rem;
+}
+.cards1{
+    background-color: #2B486C;
+}
+.cards2{
+    background-color:#7C0708;
+}
+.cards3{
+    background-color: #85caff;
+    
+}
+.cards4{
+    background-color: #500606;
+}
+.cards5{
+    background-color:#3C2C25; ;
+}
+.cards6{
+    background-color: #C93D0F;
+}
+.cards7{
+    background-color: #9783AA;
+}
+.cards8{
+    background-color: #3C2C25;
+}
+.cardContainer > div > img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+.dragging{
+    cursor: grab;
+    user-select: none;
+} 
+
+.ab{
+    display: flex;
+    height: 100vh;
+}
+#About{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.ab h1{
+    position: relative;
+
+    transform: rotate(-90deg);
+    color: white;
+    font-size: 100px;
+
+}
+.ab img{
+    height: 700px;
+    position: relative;
+
+}
+
+.desc{
+    color: white;
+    flex-wrap: wrap;
+    left: 0;
+    position: relative;
+}
+.desc p{
+    margin: 150px 0px ;
+    padding: 0px 316px;
+    font-size: 33px;
+}
+.desc img{
+    transform: rotate(90deg);
+    margin: auto;
+    left: 41%;
+    position: relative;
+    bottom: 51%;
+    width: 213px;
+    height: 800px;
+}
+.desc svg{
+    height: 500px;
+    position: relative;
+    bottom: 732px;
+    width: 100%;
+}
+
+.con{
+    height: 100vh;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+
+}
+
+#Contact{
+    width: 100%;
+    position: relative;
+    top: 100px;
+
+}
+.socs{
+    display: flex;
+    justify-content: space-around;
+
+    width: 100%;
+}
+.socs svg{
+    height: 200px;
+    /* width: 100%; */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.socs svg:hover{
+    transform: scale(1.2);
+}
+
+.footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    top: 300px;
+    width: 100%;
+    height:200px;
+    background-color: #C6D8D3;
+    font-family: sans-serif;
+}
+.footer .box1{
+    font-size: 20px;
+    padding: 0px 2px 0px 0px;
+}
+
+.footer .box1 ul{
+    padding-bottom: 20px;
+    font-weight: 2;
+}
+.footer .box1 ul li{
+    padding: 10px;
+}
+
+
+.footer .box2 ul{
+    padding-bottom: 20px;
+    font-weight: 15;
+    /* font-size: 18px; */
+}
+.footer .box2 ul li{
+    padding: 10px;
+}
+
+.footer .box3 ul{
+    padding-bottom: 20px;
+    /* font-weight: 6; */
+    /* font-size: 18px; */
+}
+.footer .box3 ul li{
+    padding: 10px;
+}
+
+.heading a{
+    font-size: 20px;
+    color: #000;
+}
